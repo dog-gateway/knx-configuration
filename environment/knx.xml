@@ -3,18 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://elite.polito.it/dogHomeConfiguration home_configuration.xsd ">
 	<dhc:buildingEnvironment>
-		<dhc:building name="KNX">
-			<dhc:flat class="Flat" name="KNX_DemoBox">
-				<dhc:room class="StorageRoom" name="storageroom">
-					<dhc:ceiling class="Ceiling" name="ceiling" />
-					<dhc:floor class="Floor" name="floor" />
-					<dhc:wall class="Wall" name="wall" />
+		<dhc:building id="KNX">
+			<dhc:flat class="Flat" id="KNX_DemoBox">
+				<dhc:room class="StorageRoom" id="storageroom">
+					<dhc:ceiling class="Ceiling" id="ceiling" />
+					<dhc:floor class="Floor" id="floor" />
+					<dhc:wall class="Wall" id="wall" />
 				</dhc:room>
 			</dhc:flat>
 		</dhc:building>
 	</dhc:buildingEnvironment>
 	<dhc:controllables>
-		<dhc:device domoticSystem="KNXNETIP" name="KNXNetIPGateway_DemoCase_Elite"
+		<dhc:device domoticSystem="KNXNETIP" id="KNXNetIPGateway_DemoCase_Elite"
 			class="KNXNetIPGateway">
 			<dhc:description>A KNXNetIPGateway instance named
 				KNXNetIPGateway_DemoCase_Elite</dhc:description>
@@ -24,7 +24,7 @@
 			<dhc:param value="1.1.1" name="individualAddress" />
 			<dhc:param value="3671" name="port" />
 		</dhc:device>
-		<dhc:device domoticSystem="KNXNETIP" name="MainsPowerOutlet_1"
+		<dhc:device domoticSystem="KNXNETIP" id="MainsPowerOutlet_1"
 			class="MainsPowerOutlet" gateway="KNXNetIPGateway_DemoCase_Elite">
 			<dhc:description>A MainsPowerOutlet instance named MainsPowerOutlet_1
 			</dhc:description>
@@ -45,7 +45,7 @@
 			</dhc:controlFunctionality>
 			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="StateChangeNotification_1"
+					<dhc:notification id="StateChangeNotification_1"
 						class="StateChangeNotification">
 						<dhc:param value="1" name="nParams" />
 						<dhc:param value="stateChanged" name="notificationName" />
@@ -61,7 +61,7 @@
 				</dhc:statevalues>
 			</dhc:state>
 		</dhc:device>
-		<dhc:device domoticSystem="KNXNETIP" name="MainsPowerOutlet_2"
+		<dhc:device domoticSystem="KNXNETIP" id="MainsPowerOutlet_2"
 			class="MainsPowerOutlet" gateway="KNXNetIPGateway_DemoCase_Elite">
 			<dhc:description>A MainsPowerOutlet instance named MainsPowerOutlet_2
 			</dhc:description>
@@ -82,7 +82,7 @@
 			</dhc:controlFunctionality>
 			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="StateChangeNotification_2"
+					<dhc:notification id="StateChangeNotification_2"
 						class="StateChangeNotification">
 						<dhc:param value="1" name="nParams" />
 						<dhc:param value="stateChanged" name="notificationName" />
@@ -98,7 +98,7 @@
 				</dhc:statevalues>
 			</dhc:state>
 		</dhc:device>
-		<dhc:device domoticSystem="KNXNETIP" name="MainsPowerOutlet_3"
+		<dhc:device domoticSystem="KNXNETIP" id="MainsPowerOutlet_3"
 			class="MainsPowerOutlet" gateway="KNXNetIPGateway_DemoCase_Elite">
 			<dhc:description>A MainsPowerOutlet instance named MainsPowerOutlet_3
 			</dhc:description>
@@ -119,7 +119,7 @@
 			</dhc:controlFunctionality>
 			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="StateChangeNotification_3"
+					<dhc:notification id="StateChangeNotification_3"
 						class="StateChangeNotification">
 						<dhc:param value="1" name="nParams" />
 						<dhc:param value="stateChanged" name="notificationName" />
@@ -135,7 +135,7 @@
 				</dhc:statevalues>
 			</dhc:state>
 		</dhc:device>
-		<dhc:device domoticSystem="KNXNETIP" name="MainsPowerOutlet_4"
+		<dhc:device domoticSystem="KNXNETIP" id="MainsPowerOutlet_4"
 			class="MainsPowerOutlet" gateway="KNXNetIPGateway_DemoCase_Elite">
 			<dhc:description>A MainsPowerOutlet instance named MainsPowerOutlet_3
 			</dhc:description>
@@ -156,7 +156,7 @@
 			</dhc:controlFunctionality>
 			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="StateChangeNotification_4"
+					<dhc:notification id="StateChangeNotification_4"
 						class="StateChangeNotification">
 						<dhc:param value="1" name="nParams" />
 						<dhc:param value="stateChanged" name="notificationName" />
@@ -172,7 +172,7 @@
 				</dhc:statevalues>
 			</dhc:state>
 		</dhc:device>
-		<dhc:device domoticSystem="KNXNETIP" name="energy_power_meter_1"
+		<dhc:device domoticSystem="KNXNETIP" id="energy_power_meter_1"
 			class="ThreePhaseElectricityMeter" gateway="KNXNetIPGateway_DemoCase_Elite">
 			<dhc:description>A ThreePhaseElectricityMeter instance named
 				energy_power_meter_1</dhc:description>
@@ -180,7 +180,7 @@
 			<dhc:param value="1.1.7" name="individualAddress" />
 			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="StateChangeNotification_meter1"
+					<dhc:notification id="StateChangeNotification_meter1"
 						class="StateChangeNotification">
 						<dhc:param value="stateChanged" name="notificationName" />
 						<dhc:param type="State" value="newState" name="notificationParamName" />
@@ -190,7 +190,7 @@
 			<dhc:notificationFunctionality
 				class="ThreePhaseVoltageMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="L1NVoltageMeasurementNotification_meter1"
+					<dhc:notification id="L1NVoltageMeasurementNotification_meter1"
 						class="ThreePhaseLNVoltageMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newPhaseNeutralVoltageValue" name="notificationName" />
@@ -199,7 +199,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L2NVoltageMeasurementNotification_meter1"
+					<dhc:notification id="L2NVoltageMeasurementNotification_meter1"
 						class="ThreePhaseLNVoltageMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newPhaseNeutralVoltageValue" name="notificationName" />
@@ -208,7 +208,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L3NVoltageMeasurementNotification_meter1"
+					<dhc:notification id="L3NVoltageMeasurementNotification_meter1"
 						class="ThreePhaseLNVoltageMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newPhaseNeutralVoltageValue" name="notificationName" />
@@ -222,7 +222,7 @@
 			<dhc:notificationFunctionality
 				class="FrequencyMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="FrequencyMeasurementNotification_meter1"
+					<dhc:notification id="FrequencyMeasurementNotification_meter1"
 						class="FrequencyMeasurementNotification">
 						<dhc:param value="newFrequencyValue" name="notificationName" />
 						<dhc:param value="0/0/29" name="groupAddress" />
@@ -234,7 +234,7 @@
 				class="SinglePhaseReactiveEnergyMeasurementNotificationFunctionality">
 				<dhc:notifications>
 					<dhc:notification
-						name="TotalReactiveEnergyMeasurementNotification_meter1" class="SinglePhaseReactiveEnergyMeasurementNotification">
+						id="TotalReactiveEnergyMeasurementNotification_meter1" class="SinglePhaseReactiveEnergyMeasurementNotification">
 						<dhc:param value="newReactiveEnergyValue" name="notificationName" />
 						<dhc:param value="0/0/2" name="groupAddress" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
@@ -244,7 +244,7 @@
 			<dhc:notificationFunctionality
 				class="SinglePhaseActiveEnergyMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="TotalActiveEnergyMeasurementNotification_meter1"
+					<dhc:notification id="TotalActiveEnergyMeasurementNotification_meter1"
 						class="SinglePhaseActiveEnergyMeasurementNotification">
 						<dhc:param value="newActiveEnergyValue" name="notificationName" />
 						<dhc:param value="0/0/1" name="groupAddress" />
@@ -255,7 +255,7 @@
 			<dhc:notificationFunctionality
 				class="ThreePhaseCurrentMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="L1CurrentMeasurementNotification_meter1"
+					<dhc:notification id="L1CurrentMeasurementNotification_meter1"
 						class="ThreePhaseCurrentMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newCurrentValue" name="notificationName" />
@@ -264,7 +264,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L2CurrentMeasurementNotification_meter1"
+					<dhc:notification id="L2CurrentMeasurementNotification_meter1"
 						class="ThreePhaseCurrentMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newCurrentValue" name="notificationName" />
@@ -273,7 +273,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L3CurrentMeasurementNotification_meter1"
+					<dhc:notification id="L3CurrentMeasurementNotification_meter1"
 						class="ThreePhaseCurrentMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newCurrentValue" name="notificationName" />
@@ -287,7 +287,7 @@
 			<dhc:notificationFunctionality
 				class="ThreePhaseApparentPowerMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="L1ApparentPowerMeasurementNotification_meter1"
+					<dhc:notification id="L1ApparentPowerMeasurementNotification_meter1"
 						class="ThreePhaseApparentPowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newApparentPowerValue" name="notificationName" />
@@ -296,7 +296,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L2ApparentPowerMeasurementNotification_meter1"
+					<dhc:notification id="L2ApparentPowerMeasurementNotification_meter1"
 						class="ThreePhaseApparentPowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newApparentPowerValue" name="notificationName" />
@@ -305,7 +305,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L3ApparentPowerMeasurementNotification_meter1"
+					<dhc:notification id="L3ApparentPowerMeasurementNotification_meter1"
 						class="ThreePhaseApparentPowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newApparentPowerValue" name="notificationName" />
@@ -319,7 +319,7 @@
 			<dhc:notificationFunctionality
 				class="PowerFactorMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="PowerFactorMeasurementNotification_meter1"
+					<dhc:notification id="PowerFactorMeasurementNotification_meter1"
 						class="PowerFactorMeasurementNotification">
 						<dhc:param value="newPowerFactorValue" name="notificationName" />
 						<dhc:param value="0/0/19" name="groupAddress" />
@@ -330,7 +330,7 @@
 			<dhc:notificationFunctionality
 				class="ThreePhaseReactivePowerMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="L1ReactivePowerMeasurementNotification_meter1"
+					<dhc:notification id="L1ReactivePowerMeasurementNotification_meter1"
 						class="ThreePhaseReactivePowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newReactivePowerValue" name="notificationName" />
@@ -339,7 +339,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L2ReactivePowerMeasurementNotification_meter1"
+					<dhc:notification id="L2ReactivePowerMeasurementNotification_meter1"
 						class="ThreePhaseReactivePowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newReactivePowerValue" name="notificationName" />
@@ -348,7 +348,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L3ReactivePowerMeasurementNotification_meter1"
+					<dhc:notification id="L3ReactivePowerMeasurementNotification_meter1"
 						class="ThreePhaseReactivePowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newReactivePowerValue" name="notificationName" />
@@ -362,7 +362,7 @@
 			<dhc:notificationFunctionality
 				class="ThreePhaseActivePowerMeasurementNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification name="L1ActivePowerMeasurementNotification_meter1"
+					<dhc:notification id="L1ActivePowerMeasurementNotification_meter1"
 						class="ThreePhaseActivePowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newActivePowerValue" name="notificationName" />
@@ -371,7 +371,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L2ActivePowerMeasurementNotification_meter1"
+					<dhc:notification id="L2ActivePowerMeasurementNotification_meter1"
 						class="ThreePhaseActivePowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newActivePowerValue" name="notificationName" />
@@ -380,7 +380,7 @@
 						<dhc:param type="String" value="phaseID" name="notificationParamName" />
 						<dhc:param type="Measure" value="value" name="notificationParamName" />
 					</dhc:notification>
-					<dhc:notification name="L3ActivePowerMeasurementNotification_meter1"
+					<dhc:notification id="L3ActivePowerMeasurementNotification_meter1"
 						class="ThreePhaseActivePowerMeasurementNotification">
 						<dhc:param value="2" name="nParams" />
 						<dhc:param value="newActivePowerValue" name="notificationName" />
@@ -449,4 +449,3 @@
 		</dhc:device>		
 	</dhc:controllables>
 </dhc:dhc>
-
