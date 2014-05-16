@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dhc:dhc xmlns:dhc="http://elite.polito.it/dogHomeConfiguration"
+<dhc:dogHomeConfiguration xmlns:dhc="http://elite.polito.it/dogHomeConfiguration"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://elite.polito.it/dogHomeConfiguration home_configuration.xsd ">
 	<dhc:buildingEnvironment>
@@ -43,14 +43,15 @@
 					</dhc:command>
 				</dhc:commands>
 			</dhc:controlFunctionality>
-			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
+			<dhc:notificationFunctionality class="OnOffNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification id="StateChangeNotification_1"
-						class="StateChangeNotification">
-						<dhc:param value="1" name="nParams" />
-						<dhc:param value="stateChanged" name="notificationName" />
+					<dhc:notification id="OnNotification_1" class="OnNotification">
+						<dhc:param value="on" name="notificationName" />
 						<dhc:param value="3/0/0" name="groupAddress" />
-						<dhc:param type="State" value="newState" name="notificationParamName" />
+					</dhc:notification>
+					<dhc:notification id="OffNotification_1" class="OffNotification">
+						<dhc:param value="off" name="notificationName" />
+						<dhc:param value="3/0/0" name="groupAddress" />
 					</dhc:notification>
 				</dhc:notifications>
 			</dhc:notificationFunctionality>
@@ -80,14 +81,15 @@
 					</dhc:command>
 				</dhc:commands>
 			</dhc:controlFunctionality>
-			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
+			<dhc:notificationFunctionality class="OnOffNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification id="StateChangeNotification_2"
-						class="StateChangeNotification">
-						<dhc:param value="1" name="nParams" />
-						<dhc:param value="stateChanged" name="notificationName" />
+					<dhc:notification id="OnNotification_2" class="OnNotification">
+						<dhc:param value="on" name="notificationName" />
 						<dhc:param value="3/0/1" name="groupAddress" />
-						<dhc:param type="State" value="newState" name="notificationParamName" />
+					</dhc:notification>
+					<dhc:notification id="OffNotification_2" class="OffNotification">
+						<dhc:param value="off" name="notificationName" />
+						<dhc:param value="3/0/1" name="groupAddress" />
 					</dhc:notification>
 				</dhc:notifications>
 			</dhc:notificationFunctionality>
@@ -117,14 +119,15 @@
 					</dhc:command>
 				</dhc:commands>
 			</dhc:controlFunctionality>
-			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
+			<dhc:notificationFunctionality class="OnOffNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification id="StateChangeNotification_3"
-						class="StateChangeNotification">
-						<dhc:param value="1" name="nParams" />
-						<dhc:param value="stateChanged" name="notificationName" />
+					<dhc:notification id="OnNotification_3" class="OnNotification">
+						<dhc:param value="on" name="notificationName" />
 						<dhc:param value="3/0/2" name="groupAddress" />
-						<dhc:param type="State" value="newState" name="notificationParamName" />
+					</dhc:notification>
+					<dhc:notification id="OffNotification_3" class="OffNotification">
+						<dhc:param value="off" name="notificationName" />
+						<dhc:param value="3/0/2" name="groupAddress" />
 					</dhc:notification>
 				</dhc:notifications>
 			</dhc:notificationFunctionality>
@@ -154,14 +157,15 @@
 					</dhc:command>
 				</dhc:commands>
 			</dhc:controlFunctionality>
-			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
+			<dhc:notificationFunctionality class="OnOffNotificationFunctionality">
 				<dhc:notifications>
-					<dhc:notification id="StateChangeNotification_4"
-						class="StateChangeNotification">
-						<dhc:param value="1" name="nParams" />
-						<dhc:param value="stateChanged" name="notificationName" />
+					<dhc:notification id="OnNotification_4" class="OnNotification">
+						<dhc:param value="on" name="notificationName" />
 						<dhc:param value="3/0/3" name="groupAddress" />
-						<dhc:param type="State" value="newState" name="notificationParamName" />
+					</dhc:notification>
+					<dhc:notification id="OffNotification_4" class="OffNotification">
+						<dhc:param value="off" name="notificationName" />
+						<dhc:param value="3/0/3" name="groupAddress" />
 					</dhc:notification>
 				</dhc:notifications>
 			</dhc:notificationFunctionality>
@@ -178,15 +182,6 @@
 				energy_power_meter_1</dhc:description>
 			<dhc:isIn>storageroom</dhc:isIn>
 			<dhc:param value="1.1.7" name="individualAddress" />
-			<dhc:notificationFunctionality class="StateChangeNotificationFunctionality">
-				<dhc:notifications>
-					<dhc:notification id="StateChangeNotification_meter1"
-						class="StateChangeNotification">
-						<dhc:param value="stateChanged" name="notificationName" />
-						<dhc:param type="State" value="newState" name="notificationParamName" />
-					</dhc:notification>
-				</dhc:notifications>
-			</dhc:notificationFunctionality>
 			<dhc:notificationFunctionality
 				class="ThreePhaseVoltageMeasurementNotificationFunctionality">
 				<dhc:notifications>
@@ -448,4 +443,4 @@
 			</dhc:state>
 		</dhc:device>		
 	</dhc:controllables>
-</dhc:dhc>
+</dhc:dogHomeConfiguration>
